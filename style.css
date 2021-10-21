@@ -1,0 +1,430 @@
+/* reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    rgba(122, 122, 122, 0.719) 0%,
+    hsl(0, 0%, 100%) 100%
+  );
+}
+
+.divider_services {
+  margin-top: 1rem;
+  height: 3px;
+  background: rgba(122, 122, 122, 0.719);
+}
+
+:root {
+  --body-font: 'DM Sans', sans-serif;
+  --title-font: 'Poppins', sans-serif;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid hsl(0 0% 95%);
+  background-color: white;
+}
+
+main {
+  margin-top: 4.5rem;
+}
+
+#header img {
+  width: 90%;
+}
+
+#header h1 {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  margin-left: -1rem;
+  align-items: center;
+}
+
+body {
+  font: 400 1rem var(--body-font);
+  -webkit-font-smoothing: antialiased;
+}
+
+.title {
+  font: 700 1.5rem var(--title-font);
+  color: black;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.services_title {
+  font: 700 1rem var(--title-font);
+  color: black;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.body {
+  font: 400 1rem var(--body-font);
+  color: rgb(56, 56, 56);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 93.5%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 4.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.toggle {
+  font-size: 1.5rem;
+  color: black;
+  cursor: pointer;
+  right: 1.5rem;
+}
+
+nav .icon-close {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+nav .icon-menu {
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  right: 1.5rem;
+}
+
+nav.show .icon-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+nav .icon-close:hover {
+  color: rgb(210, 0, 0);
+}
+
+nav .icon-menu:hover {
+  color: rgb(210, 0, 0);
+  transition: 0.3s;
+}
+
+nav.show div.icon-close {
+  opacity: 1;
+  visibility: visible;
+}
+
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+  top: -50rem;
+}
+
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+  background: white;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  position: fixed;
+  transition: 0.5s;
+}
+
+nav.show .menu {
+  display: grid;
+  place-content: center;
+}
+
+nav.show ul.grid {
+  gap: 4rem;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  transition: color 0.3s;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: rgb(210, 0, 0);
+
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+
+  transition: 0.2s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: rgb(210, 0, 0);
+}
+
+.section {
+  padding: 1rem 0;
+}
+
+/* Seção Home */
+
+#home img {
+  margin-left: 1rem;
+  width: 97.5%;
+  height: auto;
+  border-radius: 1rem;
+  position: relative;
+}
+
+#home .text {
+  margin-left: 1rem;
+  text-align: center;
+}
+
+#home .container {
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Seção About */
+
+#about .text h2 {
+  margin-bottom: 1rem;
+}
+
+#about .text p {
+  margin-bottom: 2rem;
+}
+
+#about .text {
+  margin-right: 1.5rem;
+  margin-left: 1rem;
+  text-align: justify;
+}
+
+#about img {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  width: 91%;
+  height: auto;
+  border-radius: 1rem;
+  position: relative;
+}
+
+/* Seção Serviços */
+
+#services img {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  width: 87%;
+  height: auto;
+  border-radius: 10rem;
+  position: relative;
+}
+
+#services .text {
+  margin-right: 1.5rem;
+  margin-left: 1rem;
+  text-align: justify;
+}
+
+/* Seção Contato */
+
+#contact .container {
+  margin-bottom: 2rem;
+}
+
+#contact img {
+  border-radius: 1rem;
+  width: 100%;
+}
+
+#contact .title {
+  margin-bottom: 2rem;
+}
+
+#contact .text {
+  margin-right: 1.5rem;
+  margin-left: 1rem;
+  text-align: justify;
+}
+
+#contact ul li i {
+  margin-right: 0.5rem;
+  color: rgb(210, 0, 0);
+  font-size: 1.5rem;
+}
+
+/* Rodapé */
+
+footer {
+  background: rgb(56, 56, 56);
+}
+
+footer img {
+  margin-top: -3rem;
+  margin-bottom: -2rem;
+}
+
+footer .brand p {
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+footer i {
+  font-size: 1.5rem;
+  color: rgb(210, 0, 0);
+}
+
+footer .social a {
+  margin-right: 2rem;
+}
+
+@media (min-width: 1200px) {
+  .section {
+    padding: 5rem 0;
+  }
+
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul a.title {
+    font: 400 1rem var(--title-font);
+  }
+
+  nav .icon-menu {
+    display: none;
+  }
+
+  #home .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #home img {
+    width: 80%;
+    margin-left: 5rem;
+  }
+
+  #home .text {
+    margin-right: 5rem;
+  }
+
+  #about .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+  }
+
+  #about .image-about {
+    order: 1;
+    width: 100%;
+  }
+
+  #about .text {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    order: 0;
+    text-align: justify;
+  }
+
+  #about .text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  #about .text p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .section header {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  #contact .container {
+    justify-content: space-between;
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  #contact img {
+    order: 1;
+    margin-right: 10rem;
+  }
+
+  #contact .text {
+    order: 0;
+    margin-left: 10rem;
+  }
+
+  #contact .title {
+    margin-top: -1rem;
+  }
+}
